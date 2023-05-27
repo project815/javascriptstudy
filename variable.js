@@ -5,7 +5,7 @@
 
 "use strict";
 
-//2.Variables
+//2.Variables (read and write)
 //let (added in ES6)
 let name = "song";
 console.log(name);
@@ -20,7 +20,7 @@ name2 = "song3";
 console.log(name2);
 console.log(name);
 
-//3. var (don't ever use this)
+//3. var (don't ever use this) - (read and write)
 //var hositing (move declaration from bottom to top)
 //has no black scope
 // {
@@ -30,7 +30,9 @@ console.log(name);
 
 // console.log(age);
 
-//4. constants
+//4. constant - (readOnly)
+// use const whenever possible
+// onlu use let if variable needs to change
 // favor imutable data type always for a few reasons:
 //  -security
 //  -thread safety
@@ -38,6 +40,14 @@ console.log(name);
 
 const age = 4;
 const maxNumber = 4;
+
+//Note!!
+//Immutable data type: primitive types, frozen objects(i.e object.freeze())
+//Mutable data type: all objects by default are mutable in JS
+//favor immutable data type always for a few reasons:
+// -security
+// -thread safety
+// -reduce human mistakes
 
 //5. Variable types
 //primitive, single item : number, string, boolean, null, undefined, symbol
