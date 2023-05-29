@@ -105,6 +105,7 @@ function upgradeUser(user) {
 //1. Function expression
 //a function declaration can be used earlier than it is defined (hoisted)
 //a function expression is created when the execution reaches it.
+
 const printHello2 = function () {
   // anonymous function
   console.log("Hello");
@@ -114,3 +115,53 @@ const printAgain = printHello2;
 printAgain();
 const sumAgain = sum;
 console.log(sumAgain(1, 2));
+
+//2. Callback function using function expression
+function randamQuiz(anwser, printYes, printNo) {
+  if (anwser === "love you") {
+    printYes();
+  } else {
+    printNo();
+  }
+}
+//anonymous function
+const printYes = function () {
+  console.log("yes");
+};
+const printNo = function () {
+  console.log("no");
+};
+randamQuiz("love you", printYes, printNo);
+randamQuiz("no", printNo, printYes);
+
+//callstack, recursion
+
+//Arrow function
+//always anonymous function
+
+// const simplePrint = function () {
+//   console.log("Hello");
+// };
+
+const simplePrint = () => console.log("Hello");
+
+//IIFE: Immediately Invoked Function Expression
+(function hello() {
+  console.log("IIFE");
+})();
+
+//Fun quiz time
+//function calculate(command, a, b)
+//command: add, subtract, multiply, divide
+
+const calculate = (command, a, b) => {
+  if (command === "add") {
+    return a + b;
+  } else if (command === "subtract") {
+    return a - b;
+  } else if (command === "multiply") {
+    return a * b;
+  } else if (command === "divide") {
+    return a / b;
+  }
+};
