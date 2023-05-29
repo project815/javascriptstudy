@@ -30,3 +30,49 @@ for (let fruit of fruits) {
 
 //foreach
 fruits.forEach((fruit, index, array) => console.log(fruit, index, array));
+
+//Addition, deletion, copy
+//push : add  an item to the end
+fruits.push("orange");
+console.log(fruits);
+//pop : remove an item from the end
+fruits.pop();
+console.log(fruits);
+//unshift : add an item to the beginning
+//shift : remove an item from the beginning
+fruits.unshift("grape");
+console.log(fruits);
+fruits.shift();
+console.log(fruits);
+
+//note!!. shift, unshift are slower than pop,push
+
+//splice: remove an item by index position
+fruits.push("orange", "grape");
+console.log(fruits);
+fruits.splice(1, 1);
+console.log(fruits);
+fruits.splice(1, 1, "지우고", "다른 거");
+console.log(fruits);
+
+const fruits2 = ["사과", "바나나"];
+const newFruits = fruits.concat(fruits2);
+console.log(newFruits);
+
+//5.Searching
+console.clear();
+console.log(newFruits);
+console.log(newFruits.indexOf("바나나"));
+console.log(newFruits.indexOf("사과"));
+
+//includes
+console.log(newFruits.includes("apple"));
+console.log(newFruits.includes("banana"));
+
+//lastIndexOf
+
+console.clear();
+fruits.push("apple");
+console.log(fruits);
+console.log(fruits.indexOf("apple"));
+console.log(fruits.lastIndexOf("apple"));
