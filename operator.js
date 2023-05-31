@@ -5,7 +5,7 @@ console.log("my" + "cat");
 console.log("1" + 2);
 console.log(`string literal 1+2 = ${1 + 2}`);
 
-//2. Numberic operator
+//2. Numberic opercmdator
 console.log(1 + 2); // add
 console.log(1 - 2); // subtract
 console.log(1 * 2); // multiply
