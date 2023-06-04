@@ -159,6 +159,8 @@ interface Array<T> {
      * which is coercible to the Boolean value false, or until the end of the array.
      * @param thisArg An object to which the this keyword can refer in the predicate function.
      * If thisArg is omitted, undefined is used as the this value.
+     * 배열의 모든 구성원이 지정된 테스트를 충족하는지 여부를 결정합니다.
+     * 최대 세 개의 인수를 허용하는 함수입니다. 모든 메서드 호출
      */
     every<S extends T>(predicate: (value: T, index: number, array: T[]) => value is S, thisArg?: any): this is S[];
     /**
