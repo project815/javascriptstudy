@@ -52,5 +52,38 @@ class UserStorge {
     }, 2000);
   }
 
-  getRoles(user, onSucess, onError) {}
+  getRoles(user, onSucess, onError) {
+    setTimeout(() => {
+      if (user === "ellie") {
+        onSucess({ name: "ellie", role: "admin" });
+      } else {
+        onError(new Error("not found"));
+      }
+    });
+  }
 }
+
+const userStorage = new UserStorge();
+const id = prompt("enter your id");
+const password = prompt("enter your password");
+
+userStorage.loginUser(
+  id,
+  password,
+  (user) => {
+    userStorage.getRoles(
+      user,
+      (userWithout) => {
+        alert(
+          `hello ${userWithout.name}, you have a ${userwithout.role} role `
+        );
+      },
+      (error) => {
+        console.log(error.message);
+      }
+    );
+  },
+  (error) => {
+    console.log(error.message);
+  }
+);
