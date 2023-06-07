@@ -50,3 +50,32 @@ fetchNumber
   .then((value) => {
     console.log(value);
   });
+
+//4. Error Handing
+const getHen = () =>
+  new Promise((resolve, reject) => {
+    setTimeout(() => resolve("닭"), 1000);
+  });
+const getEgg = (hen) =>
+  new Promise((resolve, reject) => {
+    setTimeout(() => reject(`${hen} => 계란`), 1000);
+  });
+const cook = (egg) =>
+  new Promise((resolve, reject) => {
+    setTimeout(() => resolve(`${egg} => 요리`), 1000);
+  });
+
+// getHen()
+//   .then((hen) => getEgg(hen))
+//   .then((egg) => cook(egg))
+//   .then((meal) => console.log(meal))
+//   .catch(consol.log);
+
+getHen()
+  .then(getEgg)
+  .catch((err) => {
+    return "빵";
+  })
+  .then(cook)
+  .then(console.log)
+  .catch(console.log);
