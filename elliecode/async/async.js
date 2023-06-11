@@ -99,3 +99,8 @@ function pickOnlyOne() {
   return Promise.race([getApple(), getBanana()]);
 }
 pickOnlyOne().then(console.log);
+
+//hello world
+console.log("hello world");
+
+//3초 뒤에  hello 출력

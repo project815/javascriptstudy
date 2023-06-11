@@ -87,3 +87,21 @@ userStorage.loginUser(
     console.log(error.message);
   }
 );
+
+//콜백 지옥의 문제점
+//가독성이 떨어짐
+//비즈니스 로직을 한눈에 이해하기 어려움
+//유지보수가 어려움
+//디버깅이 어려움
+//처리 순서를 보장받지 못함
+//또 콜백지옥에 빠지지 않으려면?
+//1. promise
+//2. async await
+//3. 라이브러리를 사용한다.
+//4. 제너레이터를 사용한다.
+//5. async await + 제너레이터를 사용한다.
+//6. RxJs를 사용한다.\
+//7. async await + RxJs를 사용한다.
+//8. async await + 제너레이터 + RxJs를 사용한다.
+//9. async await + 제너레이터 + RxJs + 라이브러리를 사용한다.
+//10. async await + 제너레이터 + RxJs + 라이브러리 + promise를 사용한다.
